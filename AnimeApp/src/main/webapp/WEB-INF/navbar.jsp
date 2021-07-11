@@ -4,8 +4,6 @@
 <html>
 <head>
 <jsp:include page="boothead.jsp"></jsp:include>
-<meta charset="UTF-8">
-<title>Insert title here</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -16,7 +14,7 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link active" href="home.do">Home</a>
-      <a class="nav-item nav-link active" href="home.do">Create Anime</a>
+      <a class="nav-item nav-link active" href="animeform.do?type=new">Create Anime</a>
     </div>
    <form action="keyword.do" class="form-inline d-flex">
     <input class="form-control mr-sm-2" type="search" placeholder="Title Search" aria-label="Search" placeholder="Enter title name" name="keyword">
@@ -26,6 +24,6 @@
 </nav>
 
 
-<jsp:include page="bootscript.jsp"></jsp:include>
+
 </body>
 </html>

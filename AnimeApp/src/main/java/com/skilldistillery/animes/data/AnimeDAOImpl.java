@@ -2,14 +2,10 @@ package com.skilldistillery.animes.data;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
-
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
-
 import com.skilldistillery.animes.entities.Anime;
 
 @Service

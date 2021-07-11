@@ -99,5 +99,12 @@ public class AnimeController {
 		model.addAttribute("animeList", animeList);
 		return "result";
 	}
+	
+	@RequestMapping(path="detail.do")
+	public String showDetailsPage(int animeId, Model model) {
+		Anime anime = dao.findById(animeId);
+		model.addAttribute("anime", anime);
+		return "animeDetails";
+	}
 
 }

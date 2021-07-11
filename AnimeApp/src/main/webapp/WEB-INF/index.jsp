@@ -10,22 +10,39 @@
 </head>
 <body>
 	<jsp:include page="navbar.jsp"></jsp:include>
-	<h1>Landing page for Anime</h1>
 
-	<c:forEach var="anime" items="${anime}">
-		<div class="card bg-dark text-white">
-			<img class="card-img" src="${anime.imgUrl}" alt="Card image">
-			<div class="card-img-overlay">
-				<h5 class="card-title">Card title</h5>
-				<p class="card-text">This is a wider card with supporting text
-					below as a natural lead-in to additional content. This content is a
-					little bit longer.</p>
-				<p class="card-text">Last updated 3 mins ago</p>
+
+	<div class="container-fluid">
+		<div class="col-9 mx-auto">
+			<h1 class="mx-auto">Landing page for Anime</h1>
+			<div class="row">
+				<c:forEach var="anime" items="${anime}">
+					<div class="col-6 col-md-4 col-lg-2 item">
+						
+						<a href="detail.do?animeId=${anime.id}">
+							<div class="card">
+								<img class="card-img-top" src="${anime.imgUrl}"
+									alt="Card image cap">
+								<div class="card-body">
+									<p class="card-text p-1 text-center">${anime.title}</p>
+								</div>
+							</div>
+						</a>
+					</div>
+				</c:forEach>
+
+
+
 			</div>
 		</div>
-	</c:forEach>
+
+	</div>
 
 
-	<jsp:include page="bootscript.jsp" />
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,0 +1,17 @@
+.card {
+	height: 90vh;
+	width: 90vw;
+}
+
+.card.mx-auto.mt-4 {
+	background: rgba(200,200,255,.9);
+}
+
+.video {
+	height: 50%;
+}
+
+.scroll {
+    max-height: 90vh;
+    overflow-y: auto;
+}
