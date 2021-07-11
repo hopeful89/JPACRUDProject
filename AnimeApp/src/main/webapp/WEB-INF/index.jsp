@@ -6,12 +6,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Anime APP</title>
+
 <jsp:include page="boothead.jsp" />
 </head>
 <body>
-	<jsp:include page="navbar.jsp"></jsp:include>
-
-
+<jsp:include page="navbar.jsp"/>
 	<div class="container-fluid">
 		<div class="col-9 mx-auto">
 			<h1 class="mx-auto">Landing page for Anime</h1>
@@ -30,19 +29,9 @@
 						</a>
 					</div>
 				</c:forEach>
-
-
-
 			</div>
 		</div>
-
 	</div>
-
-
-
-	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-		crossorigin="anonymous"></script>
+	<jsp:include page="bootscript.jsp"/>
 </body>
 </html>

@@ -34,9 +34,6 @@
 		</div>
 
 	</div>
-
-
-
-	<a href="home.do">Home</a>
+	<jsp:include page="bootscript.jsp"/>
 </body>
 </html>

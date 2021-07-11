@@ -33,7 +33,7 @@ public class AnimeController {
 			anime = dao.findById(animeId);
 		}
 		if (type.equals("new")) {
-			model.addAttribute("type", "createAnime.do");
+			model.addAttribute("type", " ");
 		} else {
 			model.addAttribute("type", "update.do");
 		}
@@ -55,8 +55,7 @@ public class AnimeController {
 			anime.setCompleted(true);
 		}
 		dao.createAnime(anime);
-		redir.addFlashAttribute("anime", anime);
-		return "redirect:result.do";
+		return "redirect:home.do";
 	}
 
 	@RequestMapping(path = "result.do")
@@ -66,12 +65,12 @@ public class AnimeController {
 
 	@RequestMapping(path = "delete.do", params = "animeId")
 	public String delete(int animeId) {
-		System.out.println("deleted anime" + dao.deleteAnime(animeId));
+		dao.deleteAnime(animeId);
 		return "redirect:home.do";
 	}
 
 	@RequestMapping(path = "update.do")
-	public String showUpdateForm(Anime anime, String watchStatus, Model model) {
+	public String showUpdateForm(Anime anime, String watchStatus, Model model, RedirectAttributes redir) {
 		if(watchStatus == null) {
 			anime.setNotStarted(true);
 			watchStatus = "";
@@ -84,13 +83,7 @@ public class AnimeController {
 		}
 		
 		Anime updatedAnime = dao.updateAnime(anime);
-		//Swap to list for jsp output
-		
-		List<Anime> animeList = new ArrayList<>();
-		animeList.add(updatedAnime);
-		
-		model.addAttribute("animeList", animeList);
-		return "result";
+		return "redirect:detail.do?animeId=" + updatedAnime.getId();
 	}
 	
 	@RequestMapping(path="keyword.do")
