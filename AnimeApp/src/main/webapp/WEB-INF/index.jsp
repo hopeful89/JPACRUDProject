@@ -13,7 +13,7 @@
 <jsp:include page="navbar.jsp"/>
 	<div class="container-fluid">
 		<div class="col-9 mx-auto">
-			<h1 class="mx-auto">Landing page for Anime</h1>
+			<h1 class="mx-auto text-center">Current Anime Adventures</h1>
 			<div class="row">
 				<c:forEach var="anime" items="${anime}">
 					<div class="col-6 col-md-4 col-lg-2 item">
