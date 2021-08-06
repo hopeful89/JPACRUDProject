@@ -2,7 +2,7 @@
 This project was created as a simple CRUD to keep track of of the current animes im watching. With a small bit of informations of some videos to get the idea of what the show is.
 
 ### How to run
-- Project address for AWS ec2: http://3.139.183.62/JPACRUDProject
+- Project address for AWS ec2:http://3.139.183.62:8080/AnimeApp
 - You can create a new anime from the nav bar
 - edit and delete functions once you are inside a single anime
 - there is currently a bug with cookies that if you don't see the video or your page isnt loading please refresh
